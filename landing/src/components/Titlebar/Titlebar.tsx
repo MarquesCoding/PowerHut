@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../public/logo.png';
+import Logo from '../../public/logo-green.png';
 
 const titleBarUrls  = [
   {
@@ -47,8 +47,9 @@ const Titlebar: React.FunctionComponent = () => {
      {/*</div>*/}
      <div className="z-10 p-7 flex flex-col">
        <div className="w-full h-full flex items-center justify-between">
-         <div>
-           <img src={Logo} alt="Logo" className="w-24"/>
+         <div className="flex flex-row gap-2 items-center">
+           <img src={Logo} alt="Logo" className="w-8"/>
+           <p className="text-white text-2xl font-semibold">PowerHut</p>
          </div>
          <div className="sm:hidden flex-col gap-2 opacity-50 flex">
            <span className="w-8 h-1 bg-white"></span>

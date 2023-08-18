@@ -3,7 +3,7 @@ import MinecraftBackground from '../../public/minecraft-bg.jpg';
 import Pill from "../Pill/Pill";
 import Space from "../Space/Space";
 import Titlebar from "../Titlebar/Titlebar";
-import Notification from "../Notification/Notification";
+import Logo from '../../public/logo-green.png';
 
 const Hero: React.FunctionComponent = () => {
   return (
@@ -20,6 +20,7 @@ const Hero: React.FunctionComponent = () => {
 
         <div className="w-full h-full absolute flex gap-4 flex-col items-center justify-center text-white">
           {/*<Notification/>*/}
+          <img src={Logo} alt="logo" className="w-6"/>
           <Pill text={"Best Minecraft Hosting you've ever seen!"}/>
           <p className="text-4xl sm:text-7xl max-w-4xl font-bold text-center">Minecraft Server Hosting from the future!</p>
           <p className="text-sm sm:text-lg font-sans max-w-sm sm:max-w-md text-center opacity-50">We provide the best minecraft hosting services for all your unlimited gaming needs.</p>
