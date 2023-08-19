@@ -8,6 +8,9 @@ import Notification from "./Notification/Notification";
 const App: React.FunctionComponent = () => {
   return (
     <div className="overflow-hidden">
+      <div className="flex w-full h-2 bg-green-400">
+
+      </div>
       <div className="w-screen h-screen">
         <Hero/>
       </div>

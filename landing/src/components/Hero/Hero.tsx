@@ -4,6 +4,7 @@ import Pill from "../Pill/Pill";
 import Space from "../Space/Space";
 import Titlebar from "../Titlebar/Titlebar";
 import Logo from '../../public/logo-green.png';
+import {motion} from "framer-motion";
 
 const Hero: React.FunctionComponent = () => {
   return (
@@ -18,22 +19,31 @@ const Hero: React.FunctionComponent = () => {
           <Space/>
         </div>
 
-        <div className="w-full h-full absolute flex gap-4 flex-col items-center justify-center text-white">
-          {/*<Notification/>*/}
-          <img src={Logo} alt="logo" className="w-6"/>
-          <Pill text={"Best Minecraft Hosting you've ever seen!"}/>
-          <p className="text-4xl sm:text-7xl max-w-4xl font-bold text-center">Minecraft Server Hosting from the future!</p>
-          <p className="text-sm sm:text-lg font-sans max-w-sm sm:max-w-md text-center opacity-50">We provide the best minecraft hosting services for all your unlimited gaming needs.</p>
-          <div className="flex gap-2">
-            <div className="text-center hover:bg-green-400/40 duration-300 cursor-pointer border border-white border-opacity-0 hover:border hover:border-green-300 w-fit px-4 py-2 bg-green-400/80 text-white rounded">
-              Try for free
+        <motion.div
+          className="w-full h-full absolute flex gap-4 flex-col items-center justify-center text-white"
+          animate={{
+            opacity: [0, 1],
+            translateY: [30, 0]
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+          }}
+        >
+            {/*<Notification/>*/}
+            <img src={Logo} alt="logo" className="w-6"/>
+            <Pill text={"Best Minecraft Hosting you've ever seen!"}/>
+            <p className="text-4xl sm:text-7xl max-w-4xl font-bold text-center">Minecraft Server Hosting from the future!</p>
+            <p className="text-sm sm:text-lg font-sans max-w-sm sm:max-w-md text-center opacity-50">We provide the best minecraft hosting services for all your unlimited gaming needs.</p>
+            <div className="flex gap-2">
+              <div className="text-center hover:bg-green-400/40 duration-300 cursor-pointer border border-white border-opacity-0 hover:border hover:border-green-300 w-fit px-4 py-2 bg-green-400/80 text-white rounded">
+                Try for free
+              </div>
+              <a href="#features" className="text-center hover:bg-gray-400/40 duration-300 cursor-pointer border border-white border-opacity-0 hover:border hover:border-gray-300 w-fit px-4 py-2 bg-gray-600/80 text-white rounded">
+                View our offerings
+              </a>
             </div>
-            <a href="#features" className="text-center hover:bg-gray-400/40 duration-300 cursor-pointer border border-white border-opacity-0 hover:border hover:border-gray-300 w-fit px-4 py-2 bg-gray-600/80 text-white rounded">
-              View our offerings
-            </a>
-          </div>
-          {/*Coming soon!*/}
-        </div>
+        </motion.div>
         <div className="absolute bottom-0 z-10 pb-4 animate-bounce transition opacity-50">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-white">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
