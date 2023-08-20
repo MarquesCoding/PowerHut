@@ -4,6 +4,8 @@ import Hero from "./Hero/Hero";
 import Footer from "./Footer/Footer";
 import Features from "./Features/Features";
 import Notification from "./Notification/Notification";
+import Panel from "./Panel/Panel";
+import Solutions from "./Solutions/Solutions";
 
 const App: React.FunctionComponent = () => {
   return (
@@ -14,8 +16,14 @@ const App: React.FunctionComponent = () => {
       <div className="w-screen h-screen">
         <Hero/>
       </div>
-      <div className="w-screen h-auto bg-blue-400">
+      <div className="w-screen h-auto">
+        <Solutions/>
+      </div>
+      <div className="w-screen h-auto">
         <Features/>
+      </div>
+      <div className="w-screen h-auto">
+        <Panel/>
       </div>
       <div className="w-screen h-auto">
         <Footer/>

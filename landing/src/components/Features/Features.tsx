@@ -28,7 +28,7 @@ const pricingTiers: PricingTier[] = [
 
 const Features: React.FunctionComponent = () => {
   return (
-    <div id="features" className="w-screen h-auto py-12 bg-dark-100 flex flex-col items-center justify-center gap-8">
+    <div id="features" className="w-screen h-auto py-12 bg-dark-600 flex flex-col items-center justify-center gap-8">
       <p className="text-center flex flex-col max-w-xl">
         <span className="sm:text-3xl font-semibold text-white">Everything you need to run your minecraft server</span>
         <span className="text-sm sm:text-md max-w-sm sm:max-w-full text-center text-white">

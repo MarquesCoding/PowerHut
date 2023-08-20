@@ -1,11 +1,16 @@
 import React from "react";
-import Logo from '../../public/logo.png';
+import Logo from '../../public/logo-white.png';
 
 const Footer: React.FunctionComponent = () => {
   return (
-    <div className="overflow-hidden bg-green-400 items-center text-white flex px-8 w-screen h-32">
-      <div className="flex flex-col gap-1">
-        <img className="w-32" src={Logo} alt="PowerHut Logo"/>
+  <div className="relative">
+    <div className="absolute top-0 flex h-auto w-full flex-row items-center justify-center opacity-100">
+      <div className="h-[1px] w-1/2 bg-gradient-to-r from-transparent to-white/30"></div>
+      <div className="h-[1px] w-1/2 bg-gradient-to-l from-transparent to-white/30"></div>
+    </div>
+    <div className="overflow-hidden bg-dark-300 text-white flex flex-col lg:flex-row gap-8 px-8 w-screen h-auto py-12">
+      <div className="flex flex-col gap-1 w-full lg:w-1/4">
+        <img className="w-44" src={Logo} alt="PowerHut Logo"/>
         <p className="text-white text-sm">
           PowerHut LLC &copy; {new Date().getFullYear()}
           {" "}
@@ -18,7 +23,46 @@ const Footer: React.FunctionComponent = () => {
           Version - {__COMMIT_HASH__}
         </a>
       </div>
+      <div className="lg:w-1/4 w-full">
+        <p className="pb-2 border-b-2 border-green-400/80">Services</p>
+        <div className="flex flex-col gap-2 mt-2">
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://billing.powerhut.pro/index.php?rp=/store/minecraft-server-hosting'>Minecraft Hosting</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://billing.powerhut.pro/index.php?rp=/store/discord-bot-hosting'>Discord Bot Hosting</a>
+        </div>
+      </div>
+      <div className="lg:w-1/4 w-full">
+        <p className="pb-2 border-b-2 border-green-400/80">Support</p>
+        <div className="flex flex-col gap-2 mt-2">
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://powerhut.pro/faq'>FAQ</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://discord.powerhut.pro'>Discord</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://docs.powerhut.pro'>Knowledgebase</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://monitor.powerhut.pro'>Server Status</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://grafana.powerhut.pro'>Grafana</a>
+        </div>
+      </div>
+      <div className="lg:w-1/4 w-full">
+        <p className="pb-2 border-b-2 border-green-400/80">Clients</p>
+        <div className="flex flex-col gap-2 mt-2">
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://billing.powerhut.pro/register.php'>Register</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://billing.powerhut.pro/login.php'>Login</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://dash.powerhut.pro'>Game Panel</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://billing.powerhut.pro/contact.php'>Submit a ticket</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://billing.powerhut.pro/contact.php'>Contact us</a>
+        </div>
+      </div>
+      <div className="lg:w-1/4 w-full">
+        <p className="pb-2 border-b-2 border-green-400/80">Legal</p>
+        <div className="flex flex-col gap-2 mt-2">
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://powerhut.pro/terms'>Terms of Service</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://powerhut.pro/privcy'>Privacy Policy</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://powerhut.pro/fair'>Fair Usage Policy</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://www.minecraft.net/en-us/eula'>Minecraft EULA</a>
+          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://powerhut.pro/support'>Abuse</a>
+        </div>
+      </div>
     </div>
+  </div>
+
   )
 }
 export default Footer;
