@@ -3,7 +3,7 @@ import MinecraftBackground from '../../public/minecraft-bg.jpg';
 import Pill from "../Pill/Pill";
 import Space from "../Space/Space";
 import Titlebar from "../Titlebar/Titlebar";
-import Logo from '../../public/logo-green.png';
+import Logo from '../../public/logo-white.png';
 import {motion} from "framer-motion";
 
 const Hero: React.FunctionComponent = () => {
@@ -43,6 +43,12 @@ const Hero: React.FunctionComponent = () => {
                 View our offerings
               </a>
             </div>
+          <div className="z-10 pt-8 flex gap-2 text-white flex-col items-center">
+            <p>Want to try out our demo minecraft server?</p>
+            <div className=" w-fit border border-white/20 hover:bg-gray-400/20 hover:text-green-400 duration-300 cursor-text px-2 py-1 rounded">
+              mc-eu.powerhut.pro
+            </div>
+          </div>
         </motion.div>
         <div className="absolute bottom-0 z-10 pb-4 animate-bounce transition opacity-50">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-white">

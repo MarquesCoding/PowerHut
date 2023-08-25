@@ -10,7 +10,7 @@ const Footer: React.FunctionComponent = () => {
     </div>
     <div className="overflow-hidden bg-dark-300 text-white flex flex-col lg:flex-row gap-8 px-8 w-screen h-auto py-12">
       <div className="flex flex-col gap-1 w-full lg:w-1/4">
-        <img className="w-44" src={Logo} alt="PowerHut Logo"/>
+        <img className="w-8" src={Logo} alt="PowerHut Logo"/>
         <p className="text-white text-sm">
           PowerHut LLC &copy; {new Date().getFullYear()}
           {" "}
@@ -37,7 +37,6 @@ const Footer: React.FunctionComponent = () => {
           <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://discord.powerhut.pro'>Discord</a>
           <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://docs.powerhut.pro'>Knowledgebase</a>
           <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://monitor.powerhut.pro'>Server Status</a>
-          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://grafana.powerhut.pro'>Grafana</a>
         </div>
       </div>
       <div className="lg:w-1/4 w-full">
