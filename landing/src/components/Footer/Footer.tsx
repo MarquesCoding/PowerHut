@@ -1,9 +1,11 @@
 import React from "react";
 import Logo from '../../public/logo-white.png';
+import {useNavigate} from "react-router-dom";
 
 const Footer: React.FunctionComponent = () => {
+  const navigate = useNavigate();
   return (
-  <div className="relative">
+  <div className="static bottom-0">
     <div className="absolute top-0 flex h-auto w-full flex-row items-center justify-center opacity-100">
       <div className="h-[1px] w-1/2 bg-gradient-to-r from-transparent to-white/30"></div>
       <div className="h-[1px] w-1/2 bg-gradient-to-l from-transparent to-white/30"></div>
@@ -52,11 +54,11 @@ const Footer: React.FunctionComponent = () => {
       <div className="lg:w-1/4 w-full">
         <p className="pb-2 border-b-2 border-green-400/80">Legal</p>
         <div className="flex flex-col gap-2 mt-2">
-          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://powerhut.pro/terms'>Terms of Service</a>
-          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://powerhut.pro/privcy'>Privacy Policy</a>
-          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://powerhut.pro/fair'>Fair Usage Policy</a>
-          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://www.minecraft.net/en-us/eula'>Minecraft EULA</a>
-          <a className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" href='https://powerhut.pro/support'>Abuse</a>
+          <p className="hover:opacity-50 hover:text-green-400 duration-300 w-fit cursor-pointer" onClick={() => navigate('/terms')}>Terms of Service</p>
+          <p className="hover:opacity-50 hover:text-green-400 duration-300 w-fit cursor-pointer" onClick={() => navigate('/privacy')}>Privacy Policy</p>
+          <p className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" >Fair Usage Policy</p>
+          <p className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" >Minecraft EULA</p>
+          <p className="hover:opacity-50 hover:text-green-400 duration-300 w-fit" >Abuse</p>
         </div>
       </div>
     </div>

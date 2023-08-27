@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 import Logo from '../../public/logo-green.png';
 import { motion } from 'framer-motion';
 import {Menu, Transition} from "@headlessui/react";
+import {useNavigate} from "react-router-dom";
 
 const titleBarUrls  = [
   {
@@ -26,14 +27,13 @@ const titleBarUrls  = [
 
 const Titlebar: React.FunctionComponent = () => {
 
-  const [loginDropdown, setLoginDropdown] = React.useState(false);
-
+  const navigate = useNavigate();
 
   return (
-     <div className="absolute w-screen z-10 h-96 pointer-events-auto flex flex-col overflow-hidden">
+     <div className="absolute top-10 w-screen z-10 h-96 pointer-events-auto flex flex-col overflow-hidden">
        <div className="z-10 p-7 flex flex-col">
          <div className="w-full h-full flex items-center justify-between">
-           <div className="flex flex-row gap-2 items-center">
+           <div className="flex flex-row gap-2 items-center hover:opacity-50 duration-300 cursor-pointer" onClick={() => navigate('/#hero')}>
              <img src={Logo} alt="Logo" className="w-8"/>
            </div>
            <div className="sm:hidden flex-col gap-2 opacity-50 flex">
